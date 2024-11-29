@@ -101,7 +101,7 @@ if data is not None:
                     st.download_button("Descargar Excel", excel, "datos_filtrados.xlsx", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
 
 
-columna_filtro = st.selectbox("Selecciona una columna para filtrar:", df.select_dtypes(include=['number']).columns)
+columna_filtro = st.selectbox("Selecciona una columna para filtrar:", df.select_dtypes(include=['number']).columns, key='unique_key_for_selectbox')
 tipo_grafico = st.selectbox('Selecciona el tipo de gráfico', ['Barras', 'Líneas', 'Área'])
 if tipo_grafico == 'Barras':
     st.bar_chart(data[sel_colum[0]])
