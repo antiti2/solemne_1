@@ -108,9 +108,9 @@ if tipo_grafico == 'Barras':
     st.bar_chart(df[sel_colum])
     
 elif tipo_grafico == 'Líneas':
-    st.line_chart(df[sel_colum[0]])
+    st.line_chart(df[sel_colum])
 else:
-    st.area_chart(df[sel_colum[0]])
+    st.area_chart(df[sel_colum])
 
      
 
