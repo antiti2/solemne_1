@@ -103,8 +103,11 @@ if data is not None:
 
 sel_colum = st.selectbox("Selecciona una columna para filtrar:", df.select_dtypes(include=['number']).columns, key='unique_key_for_selectbox')
 tipo_grafico = st.selectbox('Selecciona el tipo de gráfico', ['Barras', 'Líneas', 'Área'])
+
 if tipo_grafico == 'Barras':
+    st.write(sel_colum)
     st.bar_chart(df[sel_colum[0]])
+    
 elif tipo_grafico == 'Líneas':
     st.line_chart(df[sel_colum[0]])
 else:
