@@ -106,9 +106,9 @@ tipo_grafico = st.selectbox('Selecciona el tipo de gráfico', ['Barras', 'Línea
 if tipo_grafico == 'Barras':
     st.bar_chart(df[sel_colum[0]])
 elif tipo_grafico == 'Líneas':
-    st.line_chart(hist_values)
+    st.line_chart(df[sel_colum[0]])
 else:
-    st.area_chart(hist_values)
+    st.area_chart(df[sel_colum[0]])
 
      
 
