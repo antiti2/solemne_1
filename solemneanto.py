@@ -154,6 +154,9 @@ st.bar_chart(hist_values)
 hour_to_filter = st.slider('hour', 0, 23, 17)
 filtered_data = data[data[DATE_COLUMN].dt.hour == hour_to_filter]
 
+
+st.subheader('Map of all pickups at%s:00' % hour_to_filter)st.map(filtered_data)
+
 tipo_grafico=st.selectbox("Selecciona el tipo de grafico",["Barras","lineas", "Area"])
 if  tipo_grafico--"Barras":
     st.bar_char(hist_values)
@@ -161,4 +164,3 @@ elif tipo_graficas=="lineas":
     st.line_chart(hist_values)
 else:
     st.area chart(hist values)
-st.subheader('Map of all pickups at%s:00' % hour_to_filter)st.map(filtered_data)
