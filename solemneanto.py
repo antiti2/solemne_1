@@ -100,7 +100,7 @@ if data is not None:
                     excel = convertir_a_excel(df_filtrado)
                     st.download_button("Descargar Excel", excel, "datos_filtrados.xlsx", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
 
-
+streamlit run nombre_del_archivo.py
 columna_filtro = st.selectbox("Selecciona una columna para filtrar:", df.select_dtypes(include=['number']).columns, key='unique_key_for_selectbox')
 tipo_grafico = st.selectbox('Selecciona el tipo de gráfico', ['Barras', 'Líneas', 'Área'])
 if tipo_grafico == 'Barras':
